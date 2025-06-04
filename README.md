@@ -1,11 +1,11 @@
 # pop_europe
-A ML approach at figuring out where people live
+A ML approach to figuring out where people live.
 
 
-This code estimates the population density in high resolution over EU using sentinel-2 data.. 
+This code estimates the population density in high resolution over EU using sentinel-2 data. 
 
 
-I made this as a starting point for a group of students who needed a nice project for an ML course. They have since worked more on the code and developed and tested alternative approaches to the same problem. 
+I created this as a starting point for a group of students who needed a nice project for an ML course. They have since worked more on the code and developed and tested alternative approaches. 
 
 Feel free to contact me if you want to collaborate on this. 
 
@@ -22,7 +22,7 @@ Bottom row: pop density per ha (gaussian smooth of middle row)
 
 
 # Approach
-* unsupervised clustering of S2 imagery
+* unsupervised clustering of S2 multiband (after a PCA/ICA transform)
 * Bounded linear regression to determine the relative pop density in each cluster. 
 
 
