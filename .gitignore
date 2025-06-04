@@ -163,3 +163,4 @@ cython_debug/
 #---- CUSTOM FILES ----
 
 tiles/*.tif
+tiles/*.xml
