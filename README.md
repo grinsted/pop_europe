@@ -4,7 +4,7 @@ A ML approach to figuring out where people live.
 
 This code estimates the population density in high resolution over EU using sentinel-2 data supplemented with Sentinel-1 and nightlight data. 
 
-I created this project as a starting point for two student groups who of an ML course. They have since worked more on the code and developed and tested alternative approaches. The students tested various CNN based approaches and variations on the clustering+regression approach in this project. The most promising of the CNN based results seemed to be based on ResNet-50. Unfortunately the CNN based approach cannot generate super-resolution outputs and is rather computationally expensive. For those reasons i prefer the simpler old school methods. 
+I created this project as a starting point for two groups of student groups in an ML course. They have since worked more on the code and developed and tested alternative approaches. The students tested various CNN based approaches and variations on the clustering+regression approach in this project. The most promising of the CNN based results seemed to be based on ResNet-50. Unfortunately the CNN based approach cannot generate super-resolution outputs and is rather computationally expensive. For those reasons i prefer the simpler old school methods. 
 
 
 The R2 of predicted population is 0.75-0.8 so far, which is not that great (depending on how training data are selected and which bands are included). -But with "rescaling" this is still very useful if you trust the coarse resolution census data used as inputs. The main difficulties seem to be extremely dense city centers and industrial areas. 
