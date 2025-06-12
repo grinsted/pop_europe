@@ -164,3 +164,4 @@ cython_debug/
 
 tiles/*.tif
 tiles/*.xml
+s2tiles/*.*
