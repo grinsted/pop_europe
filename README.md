@@ -5,7 +5,11 @@ A ML approach to figuring out where people live.
 This code estimates the population density in high resolution over EU using sentinel-2 data. 
 
 
-I created this as a starting point for a group of students who needed a nice project for an ML course. They have since worked more on the code and developed and tested alternative approaches. 
+I created this as a starting point for a group of students who needed a nice project for an ML course. They have since worked more on the code and developed and tested alternative approaches. The students tested various CNN based approaches and variations on the clustering+regression approach in this project. The most promising of the CNN based results seemed to be based on ResNet-50. Unfortunately the CNN based approach cannot generate super-resolution outputs and is rather computationally expensive. For those reasons i prefer the simpler old school methods. 
+
+The R2 of predicted population is ~0.6 for the best methods so far, which is not great. -But with "rescaling" this is still useful if you trust the coarse resolution census data used as inputs. The main difficulties seem to be extremely dense city centers and industrial areas. Idea: Possibly S1 backscatter data might help there as it could correlate with building height.
+
+
 
 Feel free to contact me if you want to collaborate on this. 
 
@@ -17,13 +21,14 @@ Bottom row: pop density per ha (gaussian smooth of middle row)
 
 
 # Input data: 
-* population density in 1km resolution from https://ec.europa.eu/eurostat/web/gisco/geodata/grids
+* Population density in 1km resolution from https://ec.europa.eu/eurostat/web/gisco/geodata/grids
 * Sentinel-2 multiband images in 20m resolution.
 
 
 # Approach
 * unsupervised clustering of S2 multiband (after a PCA/ICA transform)
-* Bounded linear regression to determine the relative pop density in each cluster. 
+* Bounded linear regression to determine the relative pop density in each cluster.
+* (optional) rescale to force a match to census data.
 
 
 # Scripts: 
